@@ -1,0 +1,49 @@
+/* calendar */
+.darklight-homepage-calendar-empty {
+    padding: 10px 0 0 !important;
+}
+
+.darklight-homepage-calendar-loading {
+    padding: 20px 0 10px;
+}
+
+.darklight-homepage-calendar {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.darklight-homepage-calendar .d2l-datalist-empty {
+    margin-bottom: 10px !important;
+}
+
+.darklight-homepage-calendar-item {
+    padding: 20px;
+}
+
+/* content page panel */
+.d2l-page-collapsepane-container {
+    padding-top: 45px;
+}
+
+.daylight .d2l-page-collapsepane-shadow {
+    top: 90px;
+}
+
+/* course home calendar */
+.darklight-course-home-calendar .d2l-widget-content {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+/* bg gradient */
+.d2l-page-main:before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(249, 250, 251, 1) 0%, rgba(249, 250, 251, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    max-height: 400px;
+    z-index: -10;
+}

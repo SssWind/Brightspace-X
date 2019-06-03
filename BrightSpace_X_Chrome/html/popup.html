@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Brightspace X Popup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/popup.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo"></div>
+    <div class="checkbox-slide">
+        <input type="checkbox" id="enable-darklight">
+        <label for="enable-darklight"></label>
+    </div>
+</div>
+<div class="content">
+    <div id="quick-access-links"></div>
+    <div class="btn btn-green" id="more-options">
+        <div class="btn-icon"><img src="../img/popup-icon-cog.png" alt="Settings"></div>
+        <div class="btn-text">Extension Options</div>
+    </div>
+</div>
+<div class="footer">
+    <div class="report">Extension didn't work? <span class="link" id="report-bug">Report issue</span></div>
+</div>
+
+<div class="darklight-toast darklight-toast-hidden" id="darklight-toast">
+    Refresh for the changes to take effect.
+</div>
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/configs.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+
+</body>
+</html>
