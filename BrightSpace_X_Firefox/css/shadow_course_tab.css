@@ -1,0 +1,10 @@
+.d2l-tabs-layout .d2l-tabs-scroll-button {
+    height: 100%;
+    transform: translateY(0px);
+}
+
+.d2l-tabs-layout .d2l-tabs-scroll-button:hover, .d2l-tabs-layout .d2l-tabs-scroll-button:focus {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}

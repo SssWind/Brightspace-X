@@ -1,0 +1,345 @@
+/* navbar */
+.d2l-navigation-s, .d2l-navigation-s-no-login {
+    background: none;
+}
+
+d2l-navigation {
+    background: none;
+}
+
+d2l-navigation-band {
+    display: none !important;
+}
+
+.blue-banner {
+    background: #319be8;
+    background: linear-gradient(to right, #319be8 0%, #0086f1 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.d2l-page-main:before {
+    content: '';
+    background: linear-gradient(to bottom, rgba(221, 234, 246, 0.4) 0%, rgba(221, 234, 246, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    max-height: 400px;
+    z-index: -10;
+}
+
+.d2l-tiles-container .d2l-page-main:before {
+    background: linear-gradient(to bottom, rgba(221, 234, 246, 0.7) 0%, rgba(221, 234, 246, 0) 100%);
+}
+
+.blue-banner:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url(banner-pattern.png) right no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+.d2l-navigation-s-mobile-menu-header {
+    background: #319be8;
+    background: linear-gradient(to right, #319be8 0%, #0086f1 100%);
+    position: relative;
+}
+
+.d2l-navigation-s-mobile-menu-header > div,
+.d2l-navigation-s-mobile-menu-header > div > div {
+    z-index: 10;
+}
+
+.d2l-navigation-s-mobile-menu-header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url(banner-pattern.png) right no-repeat;
+    background-size: contain;
+    z-index: 0;
+}
+
+.d2l-navigation-s-mobile-menu-header .d2l-navigation-s-title-container {
+    color: #fff;
+}
+
+d2l-navigation-main-header .d2l-navigation-s-link {
+    color: #fff !important;
+}
+
+.d2l-navigation-s-mobile-menu-header d2l-navigation-button d2l-icon {
+    color: rgba(255, 255, 255, 0.6) !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+d2l-navigation-main-footer {
+    background: rgba(19, 23, 41, 0.8) !important;
+    border: none !important;
+    z-index: 100 !important;
+    transition: box-shadow 0.2s ease;
+}
+
+d2l-navigation-main-footer.darklight-navbar-fixed {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .darklight-navbar-sticky {
+        transition: box-shadow 0.2s;
+    }
+
+    .darklight-navbar-sticky.darklight-navbar-sticky-on {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+}
+
+d2l-navigation-main-footer a.d2l-navigation-s-link,
+d2l-navigation-main-footer a.d2l-navigation-s-link:link,
+d2l-navigation-main-footer a.d2l-navigation-s-link:visited {
+    color: #aaa !important;
+}
+
+.d2l-navigation-s-item .d2l-navigation-s-group-text,
+.d2l-navigation-s-item d2l-icon {
+    color: #aaa !important;
+}
+
+#courseSelectorId .vui-list > li {
+    border: none;
+}
+
+.d2l-navigation-s-personal-menu d2l-dropdown d2l-icon {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.d2l-navigation-s-mobile-menu .d2l-navigation-s-button-highlight d2l-icon,
+.d2l-navigation-s-mobile-menu .d2l-navigation-s-button-highlight d2l-icon svg,
+.d2l-navigation-s-mobile-menu .d2l-navigation-s-button-highlight d2l-icon svg * {
+    color: #fff;
+}
+
+.d2l-navigation-s-mobile-menu .d2l-branding-navigation-background-color {
+    background: none;
+}
+
+/* homepage courses */
+d2l-simple-overlay {
+    border-top-color: #0088fb !important;
+}
+
+#all-courses .scrollable.d2l-simple-overlay {
+    overflow-x: hidden !important;
+}
+
+/* homepages */
+.d2l-page-main-padding {
+    padding-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .homepage-container > div:not(.homepage-row):not(:last-child), .homepage-row > div:not(:last-child), .homepage-row > div > div:not(:last-child) {
+        margin-right: 2.15464%
+    }
+
+    .homepage-col-1 {
+        width: 5.10825%
+    }
+
+    .homepage-col-2 {
+        width: 13.87113%
+    }
+
+    .homepage-col-3 {
+        width: 22.63402%
+    }
+
+    .homepage-col-4 {
+        width: 31.39691%
+    }
+
+    .homepage-col-5 {
+        width: 40.15979%
+    }
+
+    .homepage-col-6 {
+        width: 48.92268%
+    }
+
+    .homepage-col-7 {
+        width: 57.68557%
+    }
+
+    .homepage-col-8 {
+        width: 66.44845%
+    }
+
+    .homepage-col-9 {
+        width: 75.21134%
+    }
+
+    .homepage-col-10 {
+        width: 83.97423%
+    }
+
+    .homepage-col-11 {
+        width: 92.73711%
+    }
+
+    .homepage-col-12 {
+        width: 100%
+    }
+}
+
+.d2l-tile {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0 !important;
+}
+
+.d2l-widget.d2l-tile .d2l-widget-header {
+    background: #319be8;
+    background: linear-gradient(to right, #319be8 0%, #0086f1 100%);
+    padding: 10px 25px;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+}
+
+.d2l-widget.d2l-tile .d2l-widget-header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url(panel-pattern.png) right no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    border-radius: 5px 5px 0 0;
+}
+
+.d2l-widget.d2l-tile .d2l-widget-header .d2l-heading {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    z-index: 10;
+}
+
+.d2l-widget.d2l-tile .d2l-widget-header .d2l-homepage-heading-link {
+    text-decoration-color: #fff !important;
+}
+
+.d2l-widget.d2l-tile .d2l-widget-content {
+    padding: 10px 25px 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+/* course content */
+#CourseImageBannerPlaceholderId {
+    margin-bottom: -10px;
+}
+
+@media (min-width: 1230px) {
+    #CourseImageBannerPlaceholderId .d2l-course-banner-container {
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden !important;
+    }
+}
+
+.daylight.darklight-fullwidth #ContentModuleTree .d2l-le-TreeAccordionItem.d2l-le-TreeAccordionItem-Selected > a.d2l-le-TreeAccordionItem-anchor::before, .daylight.darklight-fullwidth #ContentModuleTree .d2l-le-TreeAccordionItem.d2l-le-TreeAccordionItem-Selected > a.d2l-le-TreeAccordionItem-anchor:link::before, .daylight.darklight-fullwidth #ContentModuleTree .d2l-le-TreeAccordionItem.d2l-le-TreeAccordionItem-Selected > a.d2l-le-TreeAccordionItem-anchor:visited::before, .daylight.darklight-fullwidth #ContentModuleTree .d2l-le-TreeAccordionItem.d2l-le-TreeAccordionItem-Selected > a.d2l-le-TreeAccordionItem-anchor:hover::before, .daylight.darklight-fullwidth #ContentModuleTree .d2l-le-TreeAccordionItem.d2l-le-TreeAccordionItem-Selected > a.d2l-le-TreeAccordionItem-anchor:focus::before {
+    background: #e6eaf0;
+}
+
+.d2l-collapsepane-header {
+    padding-bottom: 0.6rem !important;
+}
+
+.d2l-collapsepane-content {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.d2l-collapsepane-content > div.d2l-placeholder.d2l-placeholder-live > div.d2l-placeholder.d2l-placeholder-live > div {
+    padding-top: 0;
+}
+
+.d2l-page-collapsepane-container {
+    padding-top: 45px;
+}
+
+.daylight .d2l-page-collapsepane-shadow {
+    top: 90px;
+}
+
+.darklight-fullwidth .d2l-twopanelselector-side-bg.d2l-twopanelselector-side-sep, .darklight-fullwidth .d2l-twopanelselector-side.d2l-twopanelselector-side-sep {
+    background: #f9fafb;
+}
+
+.darklight-fixed-right-button {
+    background: #21253c;
+}
+
+.darklight-fixed-right-button:hover {
+    background: #21253c;
+}
+
+/* button */
+.d2l-button, .d2l-button * {
+    vertical-align: bottom !important;
+}
+
+.dcm.bsi-button-menu {
+    vertical-align: bottom !important;
+}
+
+.d2l-button[primary], .d2l-button[primary][active][disabled], .d2l-button[primary][disabled]:focus, .d2l-button[primary][disabled]:hover {
+    background-color: #118dee;
+    border-color: #117ad7 !important;
+}
+
+.d2l-button[primary].d2l-button-focus, .d2l-button[primary].d2l-button-hover, .d2l-button[primary]:focus, .d2l-button[primary]:hover, .d2l-button[primary][active] {
+    background-color: #117ad7;
+}
+
+.bsi-button-menu.bsi-button-menu-primary, .bsi-button-menu.bsi-button-menu-primary.vui-disabled:focus, .bsi-button-menu.bsi-button-menu-primary.vui-disabled:hover {
+    background-color: #118dee;
+    border-color: #117ad7;
+}
+
+.bsi-button-menu.bsi-button-menu-primary:hover {
+    background-color: #117ad7;
+}
+
+.d2l-shim {
+    background: #000;
+}
+
+.d2l-navigation-s-mobile-menu-mask {
+    background: #000;
+}
+
+/* homepage calendar */
+.darklight-homepage-calendar {
+    overflow: hidden;
+}

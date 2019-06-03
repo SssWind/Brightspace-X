@@ -1,0 +1,639 @@
+/* common */
+.hidden {
+    display: none !important;
+}
+
+/* arrows */
+i.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+i.arrow.right {
+    transform: rotate(-45deg);
+}
+
+i.arrow.left {
+    transform: rotate(135deg);
+}
+
+i.arrow.up {
+    transform: rotate(-135deg);
+}
+
+i.arrow.down {
+    transform: rotate(45deg);
+}
+
+/* block page */
+.darklight-block-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    cursor: wait;
+    display: table;
+}
+
+.darklight-block-page-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.darklight-block-page-loader {
+    margin: auto;
+    border: 6px solid #999;
+    border-radius: 50%;
+    border-top: 6px solid #ccc;
+    width: 40px;
+    height: 40px;
+    animation: loader-spin 2s linear infinite;
+}
+
+.darklight-block-page-message {
+    font-size: 14px;
+    margin: 16px 0;
+    color: #fff;
+    text-align: center;
+}
+
+@keyframes loader-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Back to top button*/
+.darklight-back-to-top {
+    background: rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 60px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 200;
+    opacity: 1;
+    border-radius: 5px;
+    visibility: visible;
+    transition: all 0.2s ease;
+}
+
+.darklight-back-to-top .arrow {
+    border-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    margin-top: 20px;
+    transition: border 0.2s ease;
+}
+
+.darklight-back-to-top:hover {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.darklight-back-to-top-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.darklight-navbar-back-to-top {
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: none;
+    text-align: right;
+    opacity: 0.5;
+    visibility: visible;
+    transition: all 0.2s ease;
+}
+
+.darklight-navbar-back-to-top a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none !important;
+}
+
+.darklight-navbar-back-to-top .arrow {
+    position: absolute;
+    border-color: #999;
+    padding: 4px;
+    top: calc(50% - 2px);
+    right: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    transition: border 0.2s ease;
+}
+
+.darklight-navbar-back-to-top:hover {
+    opacity: 1;
+}
+
+.darklight-navbar-back-to-top-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (max-width: 767px) {
+    .darklight-back-to-top,
+    .darklight-navbar-back-to-top {
+        display: none;
+    }
+}
+
+/* navbar fixed */
+.darklight-navbar-fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 500;
+    border-top: none !important;
+}
+
+body > header.darklight-navbar-sticky {
+    position: sticky;
+    z-index: 500;
+}
+
+/* fix right buttons */
+.darklight-fixed-right-wrapper {
+    position: fixed;
+    top: 25%;
+    left: auto;
+    right: -120px;
+    bottom: auto;
+    width: 160px;
+    height: auto;
+    overflow: visible;
+    z-index: 100;
+}
+
+.darklight-fixed-right-button {
+    background: #111;
+    color: #999 !important;
+    width: 160px;
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.darklight-fixed-right-button:hover {
+    background: #333;
+    margin-left: -120px;
+}
+
+.darklight-fixed-right-button-icon {
+    display: inline-block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.darklight-fixed-right-button-icon > img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+.darklight-fixed-right-button-text {
+    display: inline-block;
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+/* homepage calendar */
+.darklight-homepage-calendar {
+    padding: 0 !important;
+}
+
+.darklight-homepage-calendar .d2l-datalist-empty {
+    margin: 25px !important;
+}
+
+.darklight-homepage-calendar-loading {
+    margin: 0;
+    padding: 25px 25px;
+    text-align: center;
+}
+
+.darklight-homepage-calendar-item {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-decoration: none !important;
+    margin: 0;
+    padding: 20px 25px;
+    border-bottom: 1px dotted #DADBD3;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.darklight-homepage-calendar-item:last-child {
+    border-bottom: none;
+}
+
+.darklight-homepage-calendar-item:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.darklight-homepage-calendar-item:hover {
+    background: #e8f2f9;
+}
+
+.darklight-homepage-calendar-date {
+    float: left;
+    width: 2.5rem;
+    height: auto;
+    text-align: center;
+    color: #565A5C;
+    margin-right: 5px;
+    position: relative;
+}
+
+.darklight-homepage-calendar-date .month {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.darklight-homepage-calendar-date .day {
+    display: block;
+    font-size: 0.95rem;
+    border-top: 1px solid #DADBD3;
+}
+
+.darklight-homepage-calendar-date.darklight-homepage-calendar-date-ani .month {
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.darklight-homepage-calendar-date.darklight-homepage-calendar-date-ani .weekday {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    font-size: 0.8rem;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(0.3rem);
+}
+
+.darklight-homepage-calendar-item:hover .darklight-homepage-calendar-date.darklight-homepage-calendar-date-ani .month {
+    opacity: 0;
+    transform: scale(0.85);
+}
+
+.darklight-homepage-calendar-item:hover .darklight-homepage-calendar-date.darklight-homepage-calendar-date-ani .weekday {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.darklight-homepage-calendar-content {
+    margin-left: 3.5rem;
+}
+
+.darklight-homepage-calendar-content .tag {
+    float: right;
+    padding: 2px;
+    border: 1px solid #ff3c6a;
+    border-radius: 3px;
+    color: #ff3c6a;
+    font-size: 0.7rem;
+    line-height: 1em;
+}
+
+.darklight-homepage-calendar-content .time {
+    font-weight: bold;
+    display: inline-block;
+    color: #565a5c;
+    font-size: 0.8rem;
+}
+
+.darklight-homepage-calendar-content .course {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.darklight-homepage-calendar-content .content {
+    display: block;
+}
+
+.darklight-block-page-loader.darklight-block-page-loader-d2l {
+    width: 55px;
+    height: 55px;
+    border: 5px solid #e6eaf0;
+    border-top-color: #006fbf;
+    margin: 10px auto 20px;
+    background: #fff;
+    animation-duration: 1.2s;
+    box-shadow: 0 0 0 10px #fff, 0 0 0 11px #f4f4fc, 0 0 25px 10px rgba(150, 150, 190, 0.2);
+}
+
+/* course home course tiles */
+.darklight-course-thumb-one {
+    background-color: transparent !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.darklight-course-thumb-one img {
+    transition: none !important;
+}
+
+/* navbar */
+.d2l-navigation-s-item *:focus {
+    outline: none !important;
+}
+
+/* dropdown */
+d2l-dropdown-menu d2l-menu {
+    display: block !important;
+    height: auto !important;
+}
+
+/* course selector */
+d2l-navigation-main-header .d2l-navigation-s-course-menu .d2l-dropdown-content-width > div {
+    display: block !important;
+    float: left !important;
+}
+
+d2l-navigation-main-header .d2l-navigation-s-course-menu .d2l-dropdown-content-width > div:after {
+    content: "" !important;
+    display: table !important;
+    clear: both !important;
+}
+
+d2l-navigation-main-header .d2l-navigation-s-course-menu .d2l-courseselector-wrapper .d2l-datalist {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.d2l-navigation-s-button:focus d2l-icon, .d2l-navigation-s-button:hover d2l-icon {
+    height: 18px !important;
+    width: 18px !important;
+}
+
+.d2l-navigation-s-mobile-menu-course-menu #courseSelectorId .vui-list > li {
+    border-top: 1px solid #d3d9e3 !important;
+}
+
+/* course home calendar */
+.darklight-course-home-calendar .d2l-widget-content {
+    padding: 0 0 10px !important;
+}
+
+.darklight-course-home-calendar .d2l-collapsepane-header {
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+}
+
+.darklight-course-home-calendar .d2l-collapsepane-content {
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+}
+
+/* dropbox marking header */
+.dropbox-header-toggle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 50;
+    padding: 4px 20px;
+    width: 100px;
+    color: #fff;
+}
+
+/* tmp fix for widget heading margin */
+.d2l-homepage-header-wrapper {
+    margin-right: 0 !important;
+}
+
+.d2l-widget-header .d2l-heading {
+    margin-right: 0 !important;
+}
+
+/* tmp fix for notifications */
+.d2l-navigation-s-notifications-wrapper {
+    display: block !important;
+    margin: 0 -5px !important;
+}
+
+.d2l-navigation-s-personal-menu {
+    padding-left: 10px !important;
+}
+
+@media (max-width: 931px) {
+    .d2l-navigation-s-course-menu .d2l-navigation-s-button-highlight,
+    .d2l-navigation-s-course-menu d2l-navigation-button-notification-icon {
+        margin: 0 15px !important;
+    }
+}
+
+/* tmp fix for popup max height calc err */
+.d2l-dialog-inline .d2l-dialog-inline-body {
+    max-height: none !important;
+}
+
+/* flyout */
+#flyout.flyout-impl {
+    z-index: 490 !important;
+}
+
+/* file viewer */
+.d2l-documentToPdfViewer-fullscreen iframe.d2l-fileviewer-rendered-pdf {
+    height: 100vh !important;
+}
+
+iframe.d2l-fileviewer-rendered-pdf-fullscreen, iframe.d2l-fileviewer-rendered-pdf-dialog {
+    height: 100vh !important;
+}
+
+/* popup page */
+.d2l-popup-page .d2l-popup-title {
+    background: #f4f4f4 !important;
+    height: 60px !important;
+}
+
+.d2l-popup-page .d2l-popup-title .d2l-heading {
+    font-size: 1.5rem !important;
+    line-height: 60px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.d2l-popup-page .d2l-popup-buttons {
+    position: fixed !important;
+    width: 100% !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background-color: #f4f4f4 !important;
+    box-shadow: none !important;
+}
+
+.d2l-popup-page .d2l-popup-body {
+
+}
+
+.d2l-popup-page .d2l-fileviewer-pdf-pdfjs {
+    border-top: none !important;
+}
+
+/* custom context menu */
+li.d2l-contextmenu-item-header > * {
+    display: block;
+    padding: 0.5rem 1rem calc(0.5rem - 2px);
+    line-height: 1.5em;
+    font-size: 0.95rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+li.d2l-contextmenu-item-title {
+    background: #e6eaf0;
+}
+
+li.d2l-contextmenu-item-title > * {
+    display: block;
+    padding: 2px 1rem 0;
+    line-height: 1.5em;
+    font-size: .6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+li.d2l-contextmenu-item-title.empty > * {
+    display: none;
+}
+
+/* course content list */
+.d2l-partial-render-shim1, .d2l-partial-render-shim2,
+.d2l-partial-render-shimbg1, .d2l-partial-render-shimbg2 {
+    z-index: 100 !important;
+}
+
+@media (min-width: 1001px) {
+    .fix-side-panel .d2l-twopanelselector-side {
+        position: fixed;
+        overflow-x: hidden;
+        overflow-y: overlay;
+    }
+
+    .fix-side-panel .d2l-twopanelselector-side::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .fix-side-panel .d2l-twopanelselector-side::-webkit-scrollbar-track {
+        background: rgb(240, 240, 240);
+        border-left: 1px solid rgb(230, 234, 240);
+    }
+
+    .fix-side-panel .d2l-twopanelselector-side::-webkit-scrollbar-thumb {
+        background: rgb(205, 205, 205);
+    }
+
+    .fix-side-panel .d2l-twopanelselector-side::-webkit-scrollbar-thumb:hover {
+        background: rgb(180, 180, 180);
+    }
+
+    .fix-side-panel .d2l-twopanelselector-side::-webkit-scrollbar-thumb:active {
+        background: rgb(150, 150, 150);
+    }
+
+    .fix-side-panel .d2l-twopanelselector-main {
+        padding-left: 320px;
+    }
+
+    .fix-side-panel .d2l-le-TreeAccordionItem-anchor:after {
+        display: none;
+    }
+}
+
+/* full width layout */
+.darklight-fullwidth .d2l-max-width {
+    max-width: none !important
+}
+
+.darklight-fullwidth .d2l-page-bg {
+    max-width: none !important
+}
+
+.darklight-fullwidth .max-width.d2l-simple-overlay {
+    max-width: none !important
+}
+
+.darklight-fullwidth .daylight iframe.d2l-navbar-margin {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important
+}
+
+/* homepage courses */
+.darklight-homepage-courses-widget .d2l-widget-content {
+    position: relative;
+    height: 140px;
+    max-height: 140px;
+    overflow: hidden;
+}
+
+.darklight-homepage-courses-widget-complete .d2l-widget-content {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+}
+
+.darklight-homepage-courses-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 100;
+    padding: 30px 0;
+}

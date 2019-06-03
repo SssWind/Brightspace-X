@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brightspace X Options</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,400,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/options.css">
+</head>
+<body>
+<div class="container">
+
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-img"></div>
+        </div>
+        <ul class="nav">
+            <li data-option-tab-index="0" data-option-tab-name="general" id="nav-tab-0" class="nav-tab active">General
+            </li>
+            <li data-option-tab-index="1" data-option-tab-name="themes" id="nav-tab-1" class="nav-tab">Themes</li>
+            <li data-option-tab-index="2" data-option-tab-name="courses" id="nav-tab-2" class="nav-tab">Courses</li>
+            <li data-option-tab-index="3" data-option-tab-name="pages" id="nav-tab-3" class="nav-tab">Pages</li>
+            <li data-option-tab-index="4" data-option-tab-name="about" id="nav-tab-4" class="nav-tab">About</li>
+            <li class="nav-tab link link-donate"><a target="_blank" data-href="donate"></a></li>
+        </ul>
+        <div class="share">
+            <div class="share-title">
+                Share Brightspace X
+            </div>
+            <!-- Share Box -->
+            <div class="share-box">
+                <!-- Facebook Share -->
+                <a data-open-in="popup" data-width="560" data-href="facebookShare" target="_blank"
+                   class="share-link share-link-facebook"></a>
+                <!-- Twitter Share -->
+                <a data-open-in="popup" data-width="500" data-href="twitterShare" target="_blank"
+                   class="share-link share-link-twitter"></a>
+                <!-- Reddit Share -->
+                <a data-open-in="newtab" data-href="redditShare" target="_blank"
+                   class="share-link share-link-reddit"></a>
+                <!-- Google Plus Share -->
+                <!--<a data-open-in="popup" data-width="380" data-href="gplusShare" target="_blank"-->
+                <!--class="share-link share-link-googleplus"></a>-->
+                <!-- LinkedIn Share -->
+                <a data-open-in="popup" data-width="500" data-href="linkedInShare" target="_blank"
+                   class="share-link share-link-linkedin"></a>
+                <!-- Copy Link -->
+                <a data-open-in="copy" class="share-link share-link-copy" data-href="linkShare"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            Created by Zijian Shao
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <div class="content">
+
+        <!-- General Start -->
+        <div data-option-index="0" class="section" id="opt-tab-0">
+            <div class="title">General</div>
+            <div class="group">
+
+                <!-- Control -->
+                <div class="group-title">Control</div>
+                <div class="group-content">
+
+                    <!-- Enable Darklight  -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide checkbox-slide-important">
+                            <input type="checkbox" id="opt-general-0-0" data-option-name="GLB_Enabled"
+                                   data-option-type="switch">
+                            <label for="opt-general-0-0"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-general-0-0" class="checkbox-label">Enable Brightspace X for the following
+                                site:</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="input-box-flex input-box-offset margin-top-10">
+                            <div class="text-prefix inline-block">https://</div>
+                            <input type="text" id="opt-general-0-1"
+                                   class="input-box inline-block width-100"
+                                   data-option-name="GLB_UserSite"
+                                   data-option-type="url-partial"
+                                   data-default-value="trial.brightspace.com"
+                                   minlength="4"
+                                   maxlength="100"
+                                   placeholder="d2l.example.com"
+                                   required spellcheck="false">
+                            <div class="text-suffix inline-block">/d2l/*</div>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>▷ Enable / disable all the other options. Synchronized with the switch in popup.</p>
+                            <p>▷ Please follow the sample pattern to fill in the text field.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="group">
+
+                <!-- Global -->
+                <div class="group-title">Global</div>
+                <div class="group-content">
+
+                    <!-- Fixed nav bar-->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-general-1-1" data-option-name="GLB_FixNavigation"
+                                   data-option-type="switch">
+                            <label for="opt-general-1-1"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-general-1-1" class="checkbox-label">Use sticky navigation bar</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Stick the navigation bar at the top if it is not visible on the screen.</p>
+                        </div>
+                    </div>
+
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-general-1-2" data-option-name="GLB_BackToTopButtonNavbar"
+                                   data-option-type="switch">
+                            <label for="opt-general-1-2"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-general-1-2" class="checkbox-label">Add back-to-top button to sticky
+                                navigation bar</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Click the right side of the navigation bar to scroll to top of the page. This function is
+                                only valid when "Use sticky navigation bar" is enabled.</p>
+                        </div>
+                    </div>
+
+                    <!-- Back to top -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-general-1-0" data-option-name="GLB_BackToTopButton"
+                                   data-option-type="switch">
+                            <label for="opt-general-1-0"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-general-1-0" class="checkbox-label">Add back-to-top button to bottom right
+                                corner</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Add "Back to top" button to each page. Click the button to go back to the top.</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Keep session alive -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-general-1-3" data-option-name="GLB_KeepSessionAlive"
+                                   data-option-type="switch">
+                            <label for="opt-general-1-3"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-general-1-3" class="checkbox-label">Keep session alive and prevent from
+                                logging out</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Prevents system from logging you out when you are inactive for some time. This function
+                                resets the session expire status every 7 minutes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Darklight favicon -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-general-1-4" data-option-name="GLB_DarklightFavicon"
+                                   data-option-type="switch">
+                            <label for="opt-general-1-4"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-general-1-4" class="checkbox-label">Use custom favicon on browser
+                                tabs:</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="input-box-flex input-box-offset margin-top-10">
+                            <div class="text-prefix inline-block">https://</div>
+                            <input type="text" id="opt-general-1-5"
+                                   class="input-box inline-block width-100"
+                                   data-option-name="GLB_UserFavicon"
+                                   data-option-type="url-partial"
+                                   data-default-value="[default]"
+                                   minlength="4"
+                                   maxlength="500"
+                                   placeholder="www.d2l.com/favicon.ico"
+                                   required spellcheck="false">
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>▷ Replace the default orange Brightspace favicon with custom favicon.</p>
+                            <p>▷ Please follow the sample pattern to fill in the text field.</p>
+                            <p>▷ Leave empty to reset to default.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- General End -->
+
+        <!-- Themes Start -->
+        <div data-option-index="1" class="section" id="opt-tab-1">
+            <div class="title">Themes</div>
+
+            <!-- Select Theme -->
+            <div class="group">
+
+                <!-- Theme list -->
+                <div class="group-title full-width">Select Theme
+                    <div class="group-subtitle">Click the 3-dot button to custom each theme</div>
+                </div>
+                <div class="group-content full-width">
+                    <div class="theme-list" id="theme-list"></div>
+                </div>
+
+            </div>
+
+            <!-- Fonts -->
+            <div class="group hidden">
+
+                <div class="group-title">Custom Font Control</div>
+                <div class="group-content">
+
+                    <!-- Smaller font size -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-themes-4-0" data-option-name="GLB_CustomFont"
+                                   data-option-type="switch">
+                            <label for="opt-themes-4-0"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-themes-4-0" class="checkbox-label">Enable custom font</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>When this option is enabled, you can choose a font from the list below to replace the
+                                default font.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="group">
+
+                <div class="group-title full-width">Select Font</div>
+                <div class="group-content full-width font-list" id="font-list"></div>
+
+            </div>
+
+            <!-- Extra -->
+            <div class="group option-group width-auto">
+                <div class="group-title">Font Size
+                    <a class="option-tip-toggle margin-left-5">?</a>
+                    <div class="group-subtitle">Unit: px</div>
+                </div>
+                <div class="group-content">
+                    <input type="range" id="opt-themes-3-0" data-option-name="GLB_BasicFontSize"
+                           data-option-type="slider" min="12" max="24" step="1"
+                           class="block width-100 input-range margin-bottom-0">
+                    <div class="font-size-tags">
+                        <span data-size="12">12</span>
+                        <span data-size="13">13</span>
+                        <span data-size="14">14</span>
+                        <span data-size="15">15</span>
+                        <span data-size="16" class="recommend">16</span>
+                        <span data-size="17">17</span>
+                        <span data-size="18">18</span>
+                        <span data-size="19">19</span>
+                        <span data-size="20">20</span>
+                        <span data-size="21">21</span>
+                        <span data-size="22">22</span>
+                        <span data-size="23">23</span>
+                        <span data-size="24">24</span>
+                    </div>
+                </div>
+                <div class="option-tip hidden">
+                    <p>▷ Adjust the root font size here. Brightspace will calculate all the other font sizes
+                        automatically
+                        based on the root font size.</p>
+                    <p>▷ Default value for Brightspace is 18px. Recommend value is 16px.</p>
+                </div>
+            </div>
+
+            <!-- Advanced themes -->
+            <div class="advanced-themes-toggle" id="advanced-themes-toggle">
+                <div class="advanced-themes-toggle-text">Advanced</div>
+            </div>
+
+            <div class="advanced-themes hidden" id="advanced-themes">
+                <!-- Custom style control -->
+                <div class="group">
+                    <div class="group-title">Custom Style Control</div>
+                    <div class="group-content">
+                        <div class="option-group checkbox-group">
+                            <div class="checkbox-slide">
+                                <input type="checkbox" id="opt-themes-1-0" data-option-name="GLB_EnableCustomStyle"
+                                       data-option-type="switch">
+                                <label for="opt-themes-1-0"></label>
+                            </div>
+                            <div class="checkbox-content">
+                                <label for="opt-themes-1-0" class="checkbox-label">Enable custom styles</label>
+                                <a class="option-tip-toggle option-tip-toggle-fixed">?</a>
+                            </div>
+                            <div class="option-tip">
+                                <p>▷ Inject the following CSS and JS code into webpages after the original code is
+                                    executed.</p>
+                                <p>▷ For performance considerations, please keep the code size less than 20KB.</p>
+                                <p>▷ If you don't know what this is, please do not enable it or enter any code
+                                    below.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space"></div>
+
+                    <!-- Custom CSS -->
+                    <div class="group-title"><label for="custom-css" class="textarea-label">Custom CSS</label></div>
+                    <div class="group-content">
+                    <textarea name="custom-css" id="custom-css" rows="8" class="input-box width-100 block"
+                              data-option-name="GLB_CustomCSS" spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="space"></div>
+
+                    <!-- Custom JS -->
+                    <div class="group-title"><label for="custom-js" class="textarea-label">Custom JS</label></div>
+                    <div class="group-content">
+                    <textarea name="custom-js" id="custom-js" rows="8" class="input-box width-100 block"
+                              data-option-name="GLB_CustomJS" spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="space"></div>
+
+                    <!-- Save custom style buttons -->
+                    <div class="group-title group-title-empty">&nbsp;</div>
+                    <div class="group-content">
+                        <a href="#" class="btn btn-primary" id="custom-save">Save Styles</a>
+                        <a href="#" class="btn btn-default" id="custom-clear">Clear</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Themes End -->
+
+        <!-- Courses Start -->
+        <div data-option-index="2" class="section" id="opt-tab-2">
+            <div class="title">Courses</div>
+
+            <div class="group">
+                <div class="group-title">Home & Contents</div>
+                <div class="group-content">
+
+                    <!-- Hide course home banner -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-courses-1-4" data-option-name="COURSE_HideCourseHomeBanner"
+                                   data-option-type="switch">
+                            <label for="opt-courses-1-4"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-courses-1-4" class="checkbox-label">Hide course home banner image</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Automatically hide the banner image on course home page.</p>
+                        </div>
+                    </div>
+
+                    <!-- Redirect to course content -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-courses-1-0" data-option-name="COURSE_DirectToContent"
+                                   data-option-type="switch">
+                            <label for="opt-courses-1-0"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-courses-1-0" class="checkbox-label">Auto redirect to table of contents
+                                page</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>When you enter a course though course tiles on homepage or course selector on
+                                navigation bar, you will be automatically redirect to it's corresponding content page.
+                                You can still access the original course home through other links.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fix side panel -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-courses-1-5" data-option-name="COURSE_FixSidePanelSelector"
+                                   data-option-type="switch">
+                            <label for="opt-courses-1-5"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-courses-1-5" class="checkbox-label">Fix side panel position on table of
+                                contents page</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Fix the position of side panel on table of contents page. No need to scroll back to top
+                                to switch between tabs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Open course content in new tab -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-courses-1-6" data-option-name="COURSE_OpenContentInNewTab"
+                                   data-option-type="switch">
+                            <label for="opt-courses-1-6"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-courses-1-6" class="checkbox-label">Open course content in new tab</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>If this options is enabled, all content links on table of contents page will open in new
+                                tab.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Course Content -->
+            <div class="group">
+                <div class="group-title">Content Viewer</div>
+                <div class="group-content">
+
+                    <!-- Content size control -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-courses-1-1" data-option-name="COURSE_ContentResizeBtn"
+                                   data-option-type="switch">
+                            <label for="opt-courses-1-1"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-courses-1-1" class="checkbox-label">Add content size control buttons</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Add a group of buttons to the right of course content pages to allow you resize the
+                                content frame or unblock page scroll.</p>
+                        </div>
+                    </div>
+
+                    <!-- Auto scroll to content -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-courses-1-2" data-option-name="COURSE_AutoScrollToContent"
+                                   data-option-type="switch">
+                            <label for="opt-courses-1-2"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-courses-1-2" class="checkbox-label">Auto jump to course content
+                                viewer</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Automatically jump to the top of the content if file is loaded in iframe.</p>
+                        </div>
+                    </div>
+
+                    <!-- Auto enter full screen -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-courses-1-3" data-option-name="COURSE_AutoEnterFullScreen"
+                                   data-option-type="switch">
+                            <label for="opt-courses-1-3"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-courses-1-3" class="checkbox-label">Auto switch to full screen mode</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Automatically switch to full screen mode if the content file is using pdf viewer.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Courses End-->
+
+        <!-- Pages Start -->
+        <div data-option-index="3" class="section" id="opt-tab-3">
+            <div class="title">Pages</div>
+            <div class="group">
+
+                <!-- Homepage -->
+                <div class="group-title">Homepage</div>
+                <div class="group-content">
+
+                    <!-- Hide cover pic -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-pages-0-10" data-option-name="HOME_HideCoverPic"
+                                   data-option-type="switch">
+                            <label for="opt-pages-0-10"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-pages-0-10" class="checkbox-label">Hide cover picture on course
+                                tiles</label>
+                        </div>
+                    </div>
+
+                    <!-- Hide term meta -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-pages-0-5" data-option-name="HOME_HideMetaTerm"
+                                   data-option-type="switch">
+                            <label for="opt-pages-0-5"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-pages-0-5" class="checkbox-label">Hide term info on course tiles</label>
+                        </div>
+                    </div>
+
+                    <!-- Hide end date meta -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-pages-0-6" data-option-name="HOME_HideMetaEndDate"
+                                   data-option-type="switch">
+                            <label for="opt-pages-0-6"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-pages-0-6" class="checkbox-label">Hide end date info on course tiles</label>
+                        </div>
+                    </div>
+
+                    <!-- Hide pinned icon -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-pages-0-9" data-option-name="HOME_HidePinnedIcon"
+                                   data-option-type="switch">
+                            <label for="opt-pages-0-9"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-pages-0-9" class="checkbox-label">Hide pin icon on pinned course
+                                tiles</label>
+                        </div>
+                    </div>
+
+                    <!-- Hide course tab selector -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-pages-0-11" data-option-name="HOME_HideCourseTabSelector"
+                                   data-option-type="switch">
+                            <label for="opt-pages-0-11"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-pages-0-11" class="checkbox-label">Hide tab selector above course
+                                tiles</label>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Context menu -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-pages-0-8" data-option-name="HOME_CourseTileContextMenu"
+                                   data-option-type="switch">
+                            <label for="opt-pages-0-8"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-pages-0-8" class="checkbox-label">Right click menu on course tiles</label>
+                        </div>
+                    </div>
+
+                    <div id="course-tile-context-menu-items-container"></div>
+
+                </div>
+            </div>
+
+            <!-- Quiz & Survey -->
+            <div class="group">
+                <div class="group-title">Quiz & Survey</div>
+                <div class="group-content">
+
+                    <!-- Content size control -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-pages-2-0" data-option-name="QUIZ_ContentResizeBtn"
+                                   data-option-type="switch">
+                            <label for="opt-pages-2-0"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-pages-2-0" class="checkbox-label">Add content size control buttons to quiz /
+                                survey pages</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Add a group of buttons to the right of quiz / survey pages to allow you resize the
+                                content frame and unblock page scroll.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Groups -->
+            <div class="group">
+                <div class="group-title">Groups</div>
+                <div class="group-content">
+
+                    <!-- Display group members -->
+                    <div class="option-group checkbox-group">
+                        <div class="checkbox-slide">
+                            <input type="checkbox" id="opt-pages-3-0" data-option-name="GROUP_ListMembersBtn"
+                                   data-option-type="switch">
+                            <label for="opt-pages-3-0"></label>
+                        </div>
+                        <div class="checkbox-content">
+                            <label for="opt-pages-3-0" class="checkbox-label">Add display group members button on
+                                available groups page</label>
+                            <a class="option-tip-toggle">?</a>
+                        </div>
+                        <div class="option-tip hidden">
+                            <p>Click the button and all members of a group will be displayed directly on the page
+                                instead of a link. This might be helpful when you are trying to find classmates who
+                                haven't found partners yet.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Pages End-->
+
+        <!-- About Start -->
+        <div data-option-index="4" class="section" id="opt-tab-4">
+            <div class="title">About</div>
+
+            <div class="group">
+                <!-- Links -->
+                <div class="group-title">
+                    Brightspace X
+                    <div class="group-subtitle">
+                        Version <span id="darklight-version"></span>
+                    </div>
+                </div>
+                <div class="group-content">
+                    <a class="btn btn-primary" data-href="github" target="_blank">GitHub</a>
+                    <a class="btn btn-success" data-href="donate" target="_blank">Donate</a>
+                    <a class="btn btn-default" data-href="darklightStore" target="_blank">Store</a>
+                    <a class="btn btn-default" data-href="officialWebsiteVersion" target="_blank">Version History</a>
+                </div>
+            </div>
+
+            <div class="group">
+                <!-- Welcome -->
+                <div class="group-title">Welcome</div>
+                <div class="group-content">
+                    <p>Thanks for using Brightspace X! This extension offers several themes for the Brightspace Daylight
+                        Experience.</p>
+                    <p>If you like this extension, please <a data-href="darklightStore" target="_blank">rate and leave a
+                        comment</a> in the store.</p>
+                </div>
+            </div>
+
+            <div class="group">
+                <!-- Notes -->
+                <div class="group-title">Notes</div>
+                <div class="group-content">
+                    <p>▷ Don't use multiple Brightspace extensions to avoid unexpected behaviors.</p>
+                    <p>▷ Brightspace may change at any time, thus the extension may not function properly.</p>
+                    <p>▷ If you have any questions regarding this extension, please email me at <a data-href="mailTo">sam.zj.shao@gmail.com</a>
+                        or <a target="_blank" id="feedback-link">submit your feedback online</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="group">
+                <!-- Disclaimers -->
+                <div class="group-title">Disclaimers</div>
+                <div class="group-content">
+                    <p>▷ This extension has no affiliation with Brightspace or D2L.</p>
+                    <p>▷ Use this extension at your own responsibility.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- About End -->
+
+    </div>
+</div>
+
+<!-- Toast Start -->
+<div class="darklight-toast darklight-toast-hidden" id="darklight-toast"></div>
+<!-- Toast End -->
+
+<!-- Popup Start -->
+<div class="popup-container hidden" id="popup-container">
+    <div class="popup-wrapper">
+        <div class="popup-frame">
+            <div class="popup-title">BRIGHTSPACE X</div>
+            <div class="popup-content" id="popup-content"></div>
+        </div>
+    </div>
+</div>
+<!-- Popup End -->
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/configs.js"></script>
+<script type="text/javascript" src="/js/jscolor.js"></script>
+<script type="text/javascript" src="/js/options.js"></script>
+
+</body>
+</html>
