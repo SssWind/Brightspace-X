@@ -640,6 +640,17 @@ function initOptions() {
             newFeatureGuide();
         }
 
+        // welcome
+        if (params.hasOwnProperty('welcome')) {
+            var welcome = $('#welcome-content').clone();
+            welcome.removeAttr('id').removeClass('hidden');
+            var popupCls = initPopup('Brightspace X', welcome, '', 1);
+            $('.' + popupCls).find('.popup-btn').on('click', function (e) {
+                e.preventDefault();
+                window.location.href = removeSearchParameters('welcome');
+            });
+        }
+
     }
 
     function loadThemes() {

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Brightspace X",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Zijian Shao",
   "background": {
     "persistent": false,
@@ -21,9 +21,6 @@
   },
   "content_scripts": [
     {
-      "css": [
-        "css/base.css"
-      ],
       "js": [
         "js/jquery.js",
         "js/configs.js",
@@ -35,7 +32,7 @@
       "run_at": "document_start"
     }
   ],
-  "description": "Brightspace X offers multiple themes for the Brightspace Daylight Experience.",
+  "description": "Brightspace X offers multiple themes for web applications with Brightspace Daylight Experience.",
   "icons": {
     "128": "icon/icon128.png",
     "16": "icon/icon16.png",
@@ -44,9 +41,9 @@
   "offline_enabled": false,
   "options_page": "html/options.html",
   "permissions": [
-    "activeTab",
     "contextMenus",
     "storage",
+    "activeTab",
     "https://*/d2l/*"
   ],
   "short_name": "Brightspace X",

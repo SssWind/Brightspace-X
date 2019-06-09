@@ -5,7 +5,7 @@
 function installWelcome(details) {
     if (details.reason === 'install') {
         chrome.tabs.create({
-            'url': chrome.runtime.getURL('/html/options.html')
+            'url': chrome.runtime.getURL('/html/options.html?welcome=show')
         });
     }
 }

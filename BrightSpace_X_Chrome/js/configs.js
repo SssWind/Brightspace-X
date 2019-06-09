@@ -11,7 +11,7 @@ function getOptionListDefault() {
         EXT_Version: '0.0.0',
         EXT_ReceiveNotification: false,
         OPT_Version: 0,
-        GLB_UserSite: 'trial.brightspace.com',
+        GLB_UserSite: 'd2l.example.com',
         GLB_Enabled: true,
         GLB_ThemeID: 0,
         GLB_CustomFont: true,
@@ -350,18 +350,18 @@ function getFontConfigs() {
 
 function getLink(key) {
     var list = {
-        darklightStore: 'https://chrome.google.com/webstore/detail/learn-darklight/lhodieepeghcemhpbloffmljoklaklho',
+        // darklightStore: 'https://chrome.google.com/webstore/detail/learn-darklight/lhodieepeghcemhpbloffmljoklaklho',
         feedback: 'https://docs.google.com/forms/d/e/1FAIpQLSeaExo2pOTuFiw75fUyia4sXbqWW6QSdn1DAaf4aReSb5zuwQ/viewform?usp=pp_url&entry.1130213050=@@extVersion@@&entry.732629279=@@browser@@&entry.34419622=@@os@@',
-        officialWebsite: 'https://www.zijianshao.com/brightx/',
-        officialWebsiteVersion: 'https://www.zijianshao.com/brightx/releases/',
+        // officialWebsite: 'https://www.zijianshao.com/brightx/',
+        // officialWebsiteVersion: 'https://www.zijianshao.com/brightx/releases/',
         github: 'https://github.com/SssWind/Brightspace-X',
         donate: 'https://www.paypal.me/zjshao',
-        linkShare: 'https://www.zijianshao.com/brightx/sharelink/?platform=chrome',
-        facebookShare: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome',
-        twitterShare: 'https://twitter.com/intent/tweet?hashtags=UWaterloo&original_referer=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2F&ref_src=twsrc%5Etfw&text=New%20themes%20for%20Brightspace!%20Get%20Brightspace%20X%20now!&tw_p=tweetbutton&url=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome',
-        redditShare: 'https://www.reddit.com/submit?url=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome&title=New%20themes%20for%20Brightspace!%20Get%20Brightspace%20X%20now!',
-        gplusShare: 'https://plus.google.com/share?url=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome',
-        linkedInShare: 'https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome',
+        // linkShare: 'https://www.zijianshao.com/brightx/sharelink/?platform=chrome',
+        // facebookShare: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome',
+        // twitterShare: 'https://twitter.com/intent/tweet?hashtags=UWaterloo&original_referer=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2F&ref_src=twsrc%5Etfw&text=New%20themes%20for%20Brightspace!%20Get%20Brightspace%20X%20now!&tw_p=tweetbutton&url=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome',
+        // redditShare: 'https://www.reddit.com/submit?url=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome&title=New%20themes%20for%20Brightspace!%20Get%20Brightspace%20X%20now!',
+        // gplusShare: 'https://plus.google.com/share?url=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome',
+        // linkedInShare: 'https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.zijianshao.com%2Fbrightx%2Fsharelink%2F%3Fplatform%3Dchrome',
         mailTo: 'mailto:sam.zj.shao@gmail.com?Subject=Brightspace X Extension',
     };
     return list[key];
