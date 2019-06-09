@@ -449,7 +449,17 @@ function initDarklight() {
         if (currURL.includes('/content/enforced/'))
             return;
 
+        browser.runtime.sendMessage({
+            action: 'insertCSS',
+            data: {file: 'css/base.css'}
+        });
+
         themeConfigs = getThemeConfigs(options.GLB_ThemeID);
+
+        browser.runtime.sendMessage({
+            action: 'executeScript',
+            data: {file: 'theme/theme_' + options.GLB_ThemeID + '/functions.js'}
+        });
 
         if (options['THEME_ID_' + options.GLB_ThemeID + '_OPT_overrideOverlayColor'] !== undefined)
             themeConfigs.overlayColor = options['THEME_ID_' + options.GLB_ThemeID + '_OPT_overrideOverlayColor'];
@@ -488,7 +498,7 @@ function initDarklight() {
         $(function () {
             browser.runtime.sendMessage({
                 action: 'executeScript',
-                data: {file: '/js/init_idle.js'}
+                data: {file: 'js/init_idle.js'}
             });
         });
 

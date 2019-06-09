@@ -38,30 +38,38 @@ function initTheme() {
     }
 
     // wait for navbar
-    var d2lNavigation = document.querySelector('d2l-navigation');
-    if (d2lNavigation !== null) {
-        if (d2lNavigation.shadowRoot !== null) {
-            themeOnNavbarReady(d2lNavigation);
-        } else {
-            var navCounter = 0;
-            var navInterval = setInterval(function () {
-                if (d2lNavigation.shadowRoot !== null || navCounter > 20) {
-                    clearInterval(navInterval);
-                    themeOnNavbarReady(d2lNavigation);
-                }
-                navCounter++;
-            }, 200);
-        }
-    }
+    // var d2lNavigation = document.querySelector('d2l-navigation');
+    // if (d2lNavigation !== null) {
+    //     if (d2lNavigation.shadowRoot !== null) {
+    //         themeOnNavbarReady(d2lNavigation);
+    //     } else {
+    //         var navCounter = 0;
+    //         var navInterval = setInterval(function () {
+    //             if (d2lNavigation.shadowRoot !== null || navCounter > 20) {
+    //                 clearInterval(navInterval);
+    //                 themeOnNavbarReady(d2lNavigation);
+    //             }
+    //             navCounter++;
+    //         }, 200);
+    //     }
+    // }
 
     // drop down button observer
     function _customizeButtons() {
         document.querySelectorAll('d2l-button-subtle, d2l-button-icon').forEach(function (el) {
             if (!el.hasAttribute('data-theme-button-init')) {
                 el.setAttribute('data-theme-button-init', '');
-                injectCSS('button:hover, button:focus, :host([active]) button, :host(.d2l-button-subtle-hover) button, :host(.d2l-button-subtle-focus) button{background-color:var(--dlight-menu-hover-background-color);color:var(--dlight-menu-hover-text-color)}' +
-                    'button:hover d2l-icon, button:focus d2l-icon, :host([active]) button d2l-icon, :host(.d2l-button-subtle-hover) button d2l-icon, :host(.d2l-button-subtle-focus) button d2l-icon{color:var(--dlight-menu-hover-text-color)}',
-                    $(el.shadowRoot), 'text');
+                if (el.shadowRoot !== null) {
+                    injectCSS('button:hover, button:focus, :host([active]) button, :host(.d2l-button-subtle-hover) button, :host(.d2l-button-subtle-focus) button{background-color:var(--dlight-menu-hover-background-color);color:var(--dlight-menu-hover-text-color)}' +
+                        'button:hover d2l-icon, button:focus d2l-icon, :host([active]) button d2l-icon, :host(.d2l-button-subtle-hover) button d2l-icon, :host(.d2l-button-subtle-focus) button d2l-icon{color:var(--dlight-menu-hover-text-color)}',
+                        $(el.shadowRoot), 'text');
+                } else {
+                    setTimeout(function () {
+                        injectCSS('button:hover, button:focus, :host([active]) button, :host(.d2l-button-subtle-hover) button, :host(.d2l-button-subtle-focus) button{background-color:var(--dlight-menu-hover-background-color);color:var(--dlight-menu-hover-text-color)}' +
+                            'button:hover d2l-icon, button:focus d2l-icon, :host([active]) button d2l-icon, :host(.d2l-button-subtle-hover) button d2l-icon, :host(.d2l-button-subtle-focus) button d2l-icon{color:var(--dlight-menu-hover-text-color)}',
+                            $(el.shadowRoot), 'text');
+                    }, 500);
+                }
             }
         });
     }
@@ -88,10 +96,14 @@ function themeOnNavbarReady(d2lNavigation) {
         $(d2lNavigation), 'file', true);
     // full width
     if (getCustomThemeOption('fullWidthLayout')) {
-        injectCSS('.d2l-navigation-centerer{max-width:none!important}',
-            $(d2lNavigation.querySelector('d2l-navigation-main-header').shadowRoot), 'text');
-        injectCSS('.d2l-navigation-centerer{max-width:none!important}',
-            $(d2lNavigation.querySelector('d2l-navigation-main-footer').shadowRoot), 'text');
+        if (d2lNavigation.querySelector('d2l-navigation-main-header') !== null
+            && d2lNavigation.querySelector('d2l-navigation-main-header').shadowRoot !== null)
+            injectCSS('.d2l-navigation-centerer{max-width:none!important}',
+                $(d2lNavigation.querySelector('d2l-navigation-main-header').shadowRoot), 'text');
+        if (d2lNavigation.querySelector('d2l-navigation-main-footer') !== null
+            && d2lNavigation.querySelector('d2l-navigation-main-footer').shadowRoot !== null)
+            injectCSS('.d2l-navigation-centerer{max-width:none!important}',
+                $(d2lNavigation.querySelector('d2l-navigation-main-footer').shadowRoot), 'text');
     }
     // logo
     var logoFile = getCustomThemeOption('customLogoURL');
@@ -127,4 +139,4 @@ function themeOnCourseTabAvailable(d2lTabs) {
     });
 }
 
-initTheme();
+// initTheme();

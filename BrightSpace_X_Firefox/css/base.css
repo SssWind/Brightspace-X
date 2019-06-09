@@ -44,3 +44,13 @@
     opacity: 0;
     pointer-events: none;
 }
+
+/* hide d2l navbar while loading*/
+d2l-navigation {
+    transition: opacity ease-in .2s !important;
+}
+
+.darklight-navigation-hidden {
+    opacity: 0.01;
+    pointer-events: none;
+}

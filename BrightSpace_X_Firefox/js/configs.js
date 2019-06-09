@@ -11,7 +11,7 @@ function getOptionListDefault() {
         EXT_Version: '0.0.0',
         EXT_ReceiveNotification: false,
         OPT_Version: 0,
-        GLB_UserSite: 'trial.brightspace.com',
+        GLB_UserSite: 'd2l.example.com',
         GLB_Enabled: true,
         GLB_ThemeID: 0,
         GLB_CustomFont: true,
@@ -350,7 +350,7 @@ function getFontConfigs() {
 
 function getLink(key) {
     var list = {
-        darklightStore: 'https://addons.mozilla.org/firefox/addon/learn-darklight/',
+        darklightStore: 'https://addons.mozilla.org/firefox/addon/brightspace-x/',
         feedback: 'https://docs.google.com/forms/d/e/1FAIpQLSeaExo2pOTuFiw75fUyia4sXbqWW6QSdn1DAaf4aReSb5zuwQ/viewform?usp=pp_url&entry.1130213050=@@extVersion@@&entry.732629279=@@browser@@&entry.34419622=@@os@@',
         officialWebsite: 'https://www.zijianshao.com/brightx/',
         officialWebsiteVersion: 'https://www.zijianshao.com/brightx/releases/',
